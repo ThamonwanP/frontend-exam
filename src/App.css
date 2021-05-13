@@ -1,38 +1,369 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  background: #d4eafd;
+  
+}
+
+
+label[for=test] {
+  display:block;
+  -webkit-perspective: 800px;
+  perspective: 800px;
+}
+
+.reversible {
+  position: relative;
+  width: 460px;
+  height: 270px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: transform 1s ease;
+  transition: all 1s;
+  margin-top: -117%;
+  margin-left: -71%;
+}
+
+#cardCvv:focus +  div label .reversible {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.reversible .card {
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 15px;
+}
+
+
+.tile-front {
+  z-index: 2;
+  height: 270px;
+  width: 460px;
+}
+
+.tile-back {
+  -webkit-transform: rotateY( 180deg);
+  transform: rotateY( 180deg);
+  height: 270px;
+  width: 460px;
+}
+
+.card-body {
+  font-size: 2rem;
+  background-image: url("https://raw.githubusercontent.com/muhammederdem/credit-card-form/master/src/assets/images/7.jpeg");
+  color: #fff;
   text-align: center;
+  height: 270px;
+  width: 460px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 55%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.card {
+  
+    width: 460px;
+    height: 270px;
+    perspective: 1000px;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    color: rgba(0, 0, 0, 0);
+    margin-bottom: -20%;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.Input__containerForm{
+  border-radius: 8px;
+  background-color: #ffffff;
+  padding: 35px;
+  width: 530px;
+  margin: 30px auto;
+  box-shadow: 0 30px 60px 0 #5a749477;
+  padding-top: 90px;
+  margin-left: -7%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.Input__containerBG{
+  border-radius: 8px;
+  background-color: #ffffff00;
+  padding: 35px;
+  width: 530px;
+  margin: 30px auto;
+  margin-top: 12%;
+  
+}
+
+.Input__header{
+  margin-top: 10px;
+}
+
+.Input__select{
+  margin-top: 23%;
+}
+
+.Input__submit {
+  width: 100%;
+  background-color: #0055d4;
   color: white;
+  padding: 14px 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 0px 11px 0 #5a7494b8;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+
+/* Card */
+
+/* .flip-card {
+  background-color: transparent;
+  width: 450px;
+  height: 270px;
+  perspective: 1000px;
+  border-radius: 15px;
+  margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    color: rgba(0, 0, 0, 0);
+    margin-bottom: -20%;
+    
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  
 }
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 15px;
+}
+
+.flip-card-front {
+  background-image: url("https://raw.githubusercontent.com/muhammederdem/credit-card-form/master/src/assets/images/7.jpeg");
+  padding: 25px 15px;
+  background-color: rgba(187, 187, 187, 0);
+  color: rgba(0, 0, 0, 0);
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 55%);
+  
+}
+
+.flip-card-back {
+  background-image: url("https://raw.githubusercontent.com/muhammederdem/credit-card-form/master/src/assets/images/7.jpeg");
+  background-color: #297fb900;
+  color: rgba(255, 255, 255, 0);
+  transform: rotateY(180deg);
+  margin-bottom: -35px;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 55%);
+}
+
+.flip-card-back__input{
+  width: 95%;
+  margin-top: 35px;
+  font-size: 25px;
+  border-radius: 5px;
+  
+} */
+
+.card__chip{
+    width: 80px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    padding: 0 10px;
+    
+}
+
+.card__logo{
+  width: 100px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  margin-left: 20%;
+  padding: 0 10px;
+  
+}
+
+.card__field{
+  background-color: rgba(0, 0, 0, 0);
+  margin-left: -2%;
+  margin-bottom: 40px;
+  width: 80%;
+  font-weight: 500;
+  color: #fff;
+  font-size: 30px;
+  border: none;
+}
+
+.card__band {
+  background: rgba(0, 0, 0, 0.897);
+  width: 460px;
+  height: 50px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: -3.8%;
+}
+
+.card__bottom{
+  opacity: 0.7;
+  font-size: 14px;
+  margin-bottom: 0;
+  color: white;
+  margin-left: 0;
+  align-items: flex-start;
+}
+
+.card__backCvv{
+  opacity: 0.7;
+  font-size: 15px;
+  margin-bottom: 2%;
+  color: white;
+  margin-left: 86%;
+  text-align: right;
+}
+
+.card__bottom-expires{
+  opacity: 0.7;
+  font-size: 14px;
+  margin-bottom: 0;
+  color: white;
+  margin-left: 32%;
+  margin-bottom: -12%;
+}
+
+.card__holder{
+  margin-left: 3%;
+  width: 100%;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 20px;
+}
+
+.card__expires{
+  margin-left: 37%;
+  width: 100%;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 20px;
+}
+
+.card-item__nameItem {
+  /* display: inline-block; */
+  min-width: 8px; 
+  position: relative;
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 0 0px;
+  margin-left: 9px;
+
+}
+
+.card-item__name {
+  font-size: 18px;
+  line-height: 1;
+  white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  text-align: start;
+  color: white;
+  padding: 0 10px;
+  margin-top: 2%;
+  margin-left: 1px;
+}
+
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+#block_container
+{
+    text-align:start;
+}
+#bloc1, #bloc2, #bloc3
+{
+    display:inline;
+}
+
+#bloc1{
+  margin-left: 15%;
+}
+
+#bloc2{
+  margin-right: -17px;
+  margin-left: -17px;
+}
+
+.card__logoBack{
+  width: 100px;
+  display: flex;
+  /* align-items: flex-start; */
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-left: 75%;
+  padding: 0 10px;
+}
+
+.card__CvvNumber{
+  width: 16px;
+  display: inline-block;
+  color: black;
+  background-color: white;
+  text-align: right;
+}
+
+.cvvBg{
+  background-color: white;
+  width: 91%;
+  height: 35px;
+  margin-bottom: 30px;
+  margin-left: 4%;
+  border-radius: 5px;
+}
+
+.cvvNum__position{
+  margin-left: 70%;
+  margin-top: -14%;
+  font-size: 16px;
+}
+
+
+
+
